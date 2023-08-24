@@ -4,7 +4,7 @@ const exec = require("@actions/exec");
 let deploy = function (folder, include, bucket, distId, invalidation) {
   return new Promise((resolve, reject) => {
     try {
-      const command = `npx s3-deploy@1.4.0 ./** ${include || ''}\
+      const command = `npx s3-deploy@1.4.0 ./** ${include || ''} \
                         --bucket ${bucket} \
                         --cwd . \
                         --distId ${distId} \
