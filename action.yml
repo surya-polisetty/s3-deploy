@@ -4,6 +4,9 @@ inputs:
   folder:
     description: 'Directory to deploy'
     required: true
+  include:
+    description: 'Optional pattern beside ./** to include hidden files'
+    required: false
   bucket:
     description: 'Name of AWS Bucket'
     required: true
