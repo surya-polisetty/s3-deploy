@@ -53,6 +53,7 @@ jobs:
           uses: lbertenasco/s3-deploy@v1
           with:
             folder: build
+            include: ./.well-known/** # optional
             bucket: ${{ secrets.S3_BUCKET }}
             dist-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
             invalidation: / *
